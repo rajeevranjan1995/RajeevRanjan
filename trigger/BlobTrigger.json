@@ -1,0 +1,23 @@
+{
+	"name": "BlobTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyFromOnPremSQLToBlob",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/rajeevinputcontainer/blobs/",
+			"scope": "/subscriptions/79535b02-9348-4afb-abb2-630dfd206b77/resourceGroups/RajeevResource/providers/Microsoft.Storage/storageAccounts/rajeevstorage12",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
